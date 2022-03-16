@@ -8,13 +8,27 @@ public class ProjectileSpawner : ProjectilePool
     private float fireRate = 3f;
     [SerializeField]
     private float bulletSpeed = 200f;
+    public ParticleSystem fireball;
+
+    private void Awake()
+    {
+        fireball.transform.position = transform.position;
+    }
 
     public void SpawnProjectile()
     {
-        var projectile = ProjectilesPool.Get();
-        projectile.Shoot(bulletSpeed);
+        fireball.Play();
+        //var projectile = ProjectilesPool.Get();
+        //projectile.Shoot(bulletSpeed);
+        //Instantiate(fireball, transform.position, Quaternion.identity);
+        //StartCoroutine(RemoveProjectileAfterThreeSeconds(projectile));
+        StartCoroutine(RemoveProjectileAfterThreeSeconds(fireball));
+    }
+    IEnumerator RemoveProjectileAfterThreeSeconds(ParticleSystem projectile)
+    {
+        yield return new WaitForSeconds(3f);
 
-        StartCoroutine(RemoveProjectileAfterThreeSeconds(projectile));
+        projectile.Stop();
     }
 
     //TODO also add the relase from pool on collision

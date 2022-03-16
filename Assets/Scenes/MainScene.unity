@@ -3483,7 +3483,7 @@ MonoBehaviour:
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.2695783, y: 1}
+    m_SensorSize: {x: 0.6, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4962,6 +4962,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1607327024223631105, guid: 34f45f251e0193e44bb7d73294c0a979, type: 3}
+      propertyPath: _particleSystem
+      value: 
+      objectReference: {fileID: 3618964646253771753, guid: b3a4bcafa8e5c88438165dff6d3520a5, type: 3}
     - target: {fileID: 2329924469650480208, guid: 34f45f251e0193e44bb7d73294c0a979, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5008,6 +5012,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2332365303662855752, guid: 34f45f251e0193e44bb7d73294c0a979, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411441656526055187, guid: 34f45f251e0193e44bb7d73294c0a979, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411441656526055187, guid: 34f45f251e0193e44bb7d73294c0a979, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411441656526055187, guid: 34f45f251e0193e44bb7d73294c0a979, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411441656526055187, guid: 34f45f251e0193e44bb7d73294c0a979, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411441656526055187, guid: 34f45f251e0193e44bb7d73294c0a979, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

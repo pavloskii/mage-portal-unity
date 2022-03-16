@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 2411441656526055187}
   - component: {fileID: 7554754296450086085}
   - component: {fileID: 8184421166912954433}
-  - component: {fileID: 8787385153526982773}
-  - component: {fileID: 6185472717971959712}
+  - component: {fileID: 1607327024223631105}
   m_Layer: 0
   m_Name: Projectile Spawner
   m_TagString: Untagged
@@ -28,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873331602384007369}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.438, y: 0.93182755, z: 2.142}
+  m_LocalPosition: {x: 0.438, y: 0.93182755, z: 1.953}
   m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 0.29999998}
   m_Children: []
   m_Father: {fileID: 2332365303662855752}
@@ -84,20 +83,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8787385153526982773
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873331602384007369}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6185472717971959712
+--- !u!114 &1607327024223631105
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,12 +92,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 873331602384007369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9039a1352a711c941a4f4508a7a96500, type: 3}
+  m_Script: {fileID: 11500000, guid: fbd895df276cc4543b1b0f2dccf0ddd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 3
-  bulletSpeed: 200
-  shoot: 0
+  _particleSystem: {fileID: 3618964646253771753, guid: b3a4bcafa8e5c88438165dff6d3520a5, type: 3}
+  poolType: 0
+  collectionChecks: 1
+  maxPoolSize: 10
+  target: {fileID: 0}
 --- !u!1 &2328963525014824756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,7 +1717,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2329924469650480208}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.23, y: 18.88, z: -12.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1805,7 +1793,7 @@ MonoBehaviour:
   _moveSpeed: 8
   _gravity: -9.81
   _shoot: 1
-  _projectileSpawner: {fileID: 6185472717971959712}
+  _attackController: {fileID: 1607327024223631105}
 --- !u!1 &2329927198943959642
 GameObject:
   m_ObjectHideFlags: 0

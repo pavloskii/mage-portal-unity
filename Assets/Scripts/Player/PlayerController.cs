@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour
     [Header("Attack")]
     [Tooltip("If there is enemy in range this needs to be true")]
     public bool _shoot = false;
-    public ProjectileSpawner _projectileSpawner;
+    //public ProjectileSpawner _projectileSpawner;
+    public AttackController _attackController;
 
     private Animator _animator;
     private CharacterController _controller;
@@ -94,6 +95,8 @@ public class PlayerController : MonoBehaviour
     //Animation Events
     public void OnAttackEvent()
     {
-        _projectileSpawner.SpawnProjectile();
+        //_projectileSpawner.SpawnProjectile();
+        _attackController.Fire();
+
     }
 }
